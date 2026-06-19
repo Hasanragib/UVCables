@@ -488,7 +488,7 @@ export const HERO_SLIDES = [
     desc: "We manufacture cables to your exact requirements — conductor size, core count, armoring, and length.",
     image: CableStriping,
     imageAlt: "Cable manufacturing factory floor",
-    cta: "Request a Quote",
-    ctaLink: "/contact",
+    cta: "Explore Products",
+    ctaLink: "/products",
   },
 ];
