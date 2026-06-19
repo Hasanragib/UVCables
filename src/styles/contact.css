@@ -1,0 +1,231 @@
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+/* Enquiry reminder banner */
+.enquiry-reminder {
+  max-width: 860px;
+  margin: 0 auto var(--space-8);
+  background: var(--navy-light);
+  border: 1px solid #C7D4E8;
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.enquiry-reminder__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.enquiry-reminder__tags {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.enquiry-reminder__tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: #fff;
+  border: 1px solid #C7D4E8;
+  color: var(--navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.enquiry-reminder__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Form actions row */
+.form-actions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+/* WhatsApp button */
+.btn--whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 20px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.15s, transform 0.15s;
+}
+
+.btn--whatsapp:hover {
+  background: #1da851;
+  transform: translateY(-1px);
+}
+
+/* Channel explanation */
+.form-channel-note {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin-top: var(--space-3);
+  line-height: 1.6;
+}
+
+/* Error banner */
+.form-error-banner {
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  font-size: 13px;
+  color: #B91C1C;
+  margin-top: var(--space-2);
+}
+
+/* Inline field error */
+.form-error {
+  display: block;
+  font-size: 11px;
+  color: var(--copper);
+  margin-top: 3px;
+}
+
+/* Loading spinner */
+.form-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* WhatsApp CTA in sidebar */
+.contact-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  background: #25D366;
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: var(--space-5);
+  transition: background 0.15s, transform 0.15s;
+}
+
+.contact-wa-btn:hover {
+  background: #1da851;
+  transform: translateY(-1px);
+}
+
+/* Contact tips */
+.contact-tip {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  align-items: flex-start;
+}
+
+.contact-tip__arrow {
+  color: var(--copper);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contact-tip span:last-child {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Dev note */
+.contact-dev-note {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: 12px;
+  color: #92400E;
+  line-height: 1.65;
+}
+
+.contact-dev-note code {
+  background: rgba(146, 64, 14, 0.1);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Success card */
+.form-success {
+  text-align: center;
+  padding: var(--space-16) var(--space-10);
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  border: var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.form-success__icon {
+  font-size: 52px;
+  margin-bottom: var(--space-4);
+  line-height: 1;
+}
+
+.form-success__title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text-heading);
+  margin-bottom: var(--space-3);
+}
+
+.form-success__sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
