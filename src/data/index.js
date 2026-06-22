@@ -478,7 +478,7 @@ export const HERO_SLIDES = [
     desc: "Solar DC cables and EV charging cables — built for India's renewable future.",
     image: SolarImage,
     imageAlt: "Solar panels with DC cable wiring",
-    cta: "View Solar & EV Cables",
+    cta: "Explore Products",
     ctaLink: "/products",
   },
   {
