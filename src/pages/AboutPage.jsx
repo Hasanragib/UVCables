@@ -72,8 +72,8 @@ export default function AboutPage() {
                 <p className="about__text">
                   We produce cables across PVC, XLPE, Silicone, EPR/PCP, Butyl
                   Rubber, Rubber, Trailing &amp; Reeling, Control, EV Charging,
-                  and Solar DC segments — covering virtually every industrial
-                  wiring need in the market.
+                  Solar DC, PTFE (Teflon), and Silicone Tubes &amp; Profiles —
+                  covering virtually every industrial wiring need in the market.
                 </p>
 
                 <div className="about__highlights">
