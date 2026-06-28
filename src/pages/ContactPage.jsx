@@ -312,7 +312,7 @@ export default function ContactPage() {
                       {/* mailto fallback */}
                       <button
                         type="button"
-                        className="btn btn--ghost btn--sm"
+                        className="btn btn--ghost"
                         onClick={handleMailto}
                         aria-label="Send enquiry via email client"
                       >

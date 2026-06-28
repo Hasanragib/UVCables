@@ -11,6 +11,8 @@ import Solar_Cable from "../assets/Solar_Cable.webp";
 import CableTower from "../assets/CableTower.webp";
 import SolarImage from "../assets/SolarImage.webp";
 import CableStriping from "../assets/CableStriping.webp";
+import SiliconeTubesProfiles from "../assets/SiliconeTubesProfiles.webp";
+import TeflonCable from "../assets/TeflonCable.webp";
 
 // ─── BRAND ───────────────────────────────────────────────────────────────────
 export const BRAND = {
@@ -22,6 +24,12 @@ export const BRAND = {
   email: "info@uvcables.com",
   address:
     "27/1/2, Street No. 10, Park Side, Sangam Vihar, Delhi-110084, India",
+  website: "https://uvcables.com",
+  social: {
+    linkedin: "https://www.linkedin.com/in/uvcables",
+    instagram: "https://www.instagram.com/uvcables",
+    blogger: "https://uvcables.blogspot.com/",
+  },
 };
 
 // ─── USE CASES ────────────────────────────────────────────────────────────────
@@ -153,6 +161,18 @@ export const STANDARDS_TABLE = [
     std: "IEC 62893 : 2017",
     scope: "Charging cables for electric vehicles",
     cables: "EV Charging Cables",
+  },
+  {
+    std: "IS 11149 : 1984",
+    scope:
+      "Specification for silicone rubber compounds for electrical purposes",
+    cables: "Silicone Tubes & Profiles",
+  },
+  {
+    std: "Customer Spec",
+    scope:
+      "PTFE / Teflon cables and silicone profiles manufactured to buyer's drawing and specification",
+    cables: "PTFE Cables, Silicone Tubes",
   },
 ];
 
@@ -441,6 +461,64 @@ export const PRODUCTS = [
       "Solar farms",
       "String inverters",
       "Module interconnection",
+    ],
+  },
+  {
+    id: "ptfe",
+    label: "PTFE (Teflon) Cables",
+    short: "PTFE",
+    dot: "#00897B",
+    icon: "🧪",
+    useCases: ["specialty", "hightemp"],
+    isStandards: ["nostandard"],
+    isDisplay: "Customer Spec / BS 6500",
+    image: TeflonCable,
+    imageAlt: "PTFE Teflon cable insulation",
+    metaDesc:
+      "PTFE Teflon insulated cables for chemical, pharmaceutical and high temperature applications. Excellent chemical resistance up to +260°C.",
+    description:
+      "PTFE (Polytetrafluoroethylene / Teflon) insulated cables offering exceptional chemical resistance, low friction, and high temperature performance. Ideal for aggressive chemical and pharmaceutical environments.",
+    specs: [
+      "Voltage: Up to 1.1 kV",
+      "Temp Range: -65°C to +260°C",
+      "Insulation: PTFE (Teflon)",
+      "Conductor: Nickel-plated / Silver-plated copper",
+      "Chemical: Excellent resistance to all chemicals",
+    ],
+    applications: [
+      "Chemical & pharmaceutical plants",
+      "Laboratory equipment",
+      "Aerospace & defence",
+      "High temperature wiring",
+    ],
+  },
+  {
+    id: "silicone-tubes",
+    label: "Silicone Tubes & Profiles",
+    short: "SIL-T",
+    dot: "#5C6BC0",
+    icon: "⭕",
+    useCases: ["hightemp", "specialty"],
+    isStandards: ["nostandard"],
+    isDisplay: "Customer Spec/ IS 11149",
+    image: SiliconeTubesProfiles,
+    imageAlt: "Silicone tubes and profiles industrial",
+    metaDesc:
+      "Silicone rubber tubes, sleeves, and custom profiles for insulation, sealing, and protection in high temperature industrial applications.",
+    description:
+      "Silicone rubber tubes, sleeves, and custom extruded profiles for insulation, sealing, gasketing, and mechanical protection. Available in standard and custom cross-sections for industrial and OEM applications.",
+    specs: [
+      "Temp Range: -60°C to +200°C",
+      "Material: Food-grade / Industrial silicone",
+      "Hardness: 30–80 Shore A",
+      "Custom profiles: Round, flat, D-section, U-section",
+      "Colour: Red, black, translucent, custom",
+    ],
+    applications: [
+      "OEM machine builders",
+      "Gaskets & sealing",
+      "Cable sleeving & protection",
+      "Food & pharma equipment",
     ],
   },
 ];
