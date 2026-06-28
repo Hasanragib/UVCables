@@ -88,7 +88,7 @@ export default function HomePage() {
             {[
               { icon: '📅', name: 'Est. 1986',             desc: 'Four decades of cable manufacturing experience in Delhi NCR.' },
               { icon: '🔧', name: 'Custom Specifications', desc: 'Any length, any conductor cross-section, built to your requirement.' },
-              { icon: '🚚', name: 'Delhi NCR Delivery',     desc: 'Reliable supply to manufacturers, contractors, and retailers.' },
+              { icon: '🚚', name: 'All India Delivery',     desc: 'Reliable supply to manufacturers, contractors, and retailers.' },
               { icon: '🤝', name: 'B2B Focus',              desc: 'Dedicated to other manufacturers and trade distributors.' },
               { icon: '⚡', name: 'Fast Turnaround',        desc: 'Quick order processing without large-corporate delays.' },
               { icon: '📐', name: 'Wide Product Range',     desc: 'From PVC to XLPE, Silicone, EPR, EV and Solar cables.' },
