@@ -34,9 +34,7 @@ export default function HeroSlider() {
 
       {/* Content */}
       <div className="hero__content">
-        <div className="hero__badge">
-          🏭 Delhi NCR · B2B Cable Manufacturer · Custom MOQ
-        </div>
+        <div className="hero__badge">🏭 Delhi NCR · B2B Manufacturer</div>
         <h1 className="hero__h1" key={heroSlide}>
           {slide.headline.split(" ").slice(0, -1).join(" ")}{" "}
           <span className="hero__accent">

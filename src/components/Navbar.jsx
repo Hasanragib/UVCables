@@ -86,7 +86,7 @@ export default function Navbar() {
               to="/contact"
               className="btn btn--primary btn--sm navbar__cta"
             >
-              Get Quote
+              Get a Quote
             </Link>
           </nav>
 

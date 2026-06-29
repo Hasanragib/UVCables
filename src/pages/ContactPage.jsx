@@ -124,8 +124,8 @@ export default function ContactPage() {
   return (
     <>
       <SEOHead
-        title="Contact & Quote Request"
-        description="Request a cable quote from United Values Cables, Delhi NCR. PVC, XLPE, EPR, Solar, EV and control cables. B2B manufacturers and retailers."
+        title="Get a Quote"
+        description="Request a cable quote from UV Cables, Delhi NCR. PVC, XLPE, EPR, Solar, EV, PTFE(Teflon), Control Cables & Silicone Tubes. B2B manufacturers and retailers."
         path="/contact"
       />
 
@@ -139,7 +139,7 @@ export default function ContactPage() {
             <div className="section-head">
               <div className="section-label">Get In Touch</div>
               <h1 className="section-title" id="contact-heading">
-                Request a Quote
+                Get a Quote
               </h1>
               <p className="section-desc">
                 Fill in your requirements below. We'll respond within 1 business
@@ -186,7 +186,7 @@ export default function ContactPage() {
                         name="name"
                         value={form.name}
                         onChange={handle}
-                        placeholder="Rajesh Kumar"
+                        placeholder="Full Name"
                         required
                         error={fieldErrors.name}
                       />
@@ -340,7 +340,7 @@ export default function ContactPage() {
 
                   {/* WhatsApp CTA */}
                   <a
-                    href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || '919818088873'}`}
+                    href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER || "919818088873"}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-wa-btn"
