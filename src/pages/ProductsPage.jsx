@@ -61,9 +61,8 @@ export default function ProductsPage() {
         >
           <div className="container">
             <div className="section-head">
-              <div className="section-label">Our Range</div>
               <h1 className="section-title" id="products-heading">
-                Cable Product Lines
+                Industrial Cables
               </h1>
               <p className="section-desc">
                 Filter by use case or IS / IEC standard. Click any card to view

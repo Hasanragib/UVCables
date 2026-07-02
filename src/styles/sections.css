@@ -508,15 +508,14 @@
 .footer__social-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 7px 13px;
-  border-radius: var(--radius-md);
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   background: var(--bg-white);
   border: var(--border);
   color: var(--text-body);
   text-decoration: none;
-  font-size: 12px;
-  font-weight: 600;
   transition: all 0.18s ease;
 }
 

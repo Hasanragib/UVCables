@@ -3,7 +3,6 @@ import { BRAND, PRODUCTS } from "../data/index.js";
 import "../styles/sections.css";
 import CompanyLogo from "../assets/CompanyLogo.webp";
 
-// ─── LinkedIn Icon ────────────────────────────────────────────────────────────
 function LinkedInIcon() {
   return (
     <svg
@@ -18,7 +17,6 @@ function LinkedInIcon() {
   );
 }
 
-// ─── Instagram Icon ───────────────────────────────────────────────────────────
 function InstagramIcon() {
   return (
     <svg
@@ -33,7 +31,6 @@ function InstagramIcon() {
   );
 }
 
-// ─── Blogger Icon ─────────────────────────────────────────────────────────────
 function BloggerIcon() {
   return (
     <svg
@@ -48,7 +45,6 @@ function BloggerIcon() {
   );
 }
 
-// ─── Footer ───────────────────────────────────────────────────────────────────
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -59,8 +55,9 @@ export default function Footer() {
     <footer className="footer" role="contentinfo">
       <div className="footer__inner">
         <div className="footer__top">
-          {/* ── Brand + Contact + Social ── */}
+          {/* COLUMN 1 — Logo + Social + Contact — ALL inside one div */}
           <div className="footer__brand-col">
+            {/* 1. Logo */}
             <Link to="/" className="footer__logo">
               <img
                 src={CompanyLogo}
@@ -73,7 +70,41 @@ export default function Footer() {
               </div>
             </Link>
 
-            {/* Contact rows */}
+            {/* 2. Social — above contact */}
+            <div
+              className="footer__social"
+              aria-label="Follow us on social media"
+            >
+              <a
+                href="https://www.linkedin.com/in/uvcables"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-btn footer__social-btn--linkedin"
+                aria-label="Follow UV Cables on LinkedIn"
+              >
+                <LinkedInIcon />
+              </a>
+              <a
+                href="https://www.instagram.com/uvcables"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-btn footer__social-btn--instagram"
+                aria-label="Follow UV Cables on Instagram"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href="https://uvcables.blogspot.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer__social-btn footer__social-btn--blogger"
+                aria-label="Read our Blog"
+              >
+                <BloggerIcon />
+              </a>
+            </div>
+
+            {/* 3. Contact — below social */}
             <div className="footer__contact-info">
               <a href={"tel:" + BRAND.phone} className="footer__contact-row">
                 <span>📞</span>
@@ -88,48 +119,10 @@ export default function Footer() {
                 <span>Mon–Sat, 9AM–6PM IST</span>
               </div>
             </div>
-
-            {/* Social buttons — each written out explicitly, no map/template literals */}
-            <div
-              className="footer__social"
-              aria-label="Follow us on social media"
-            >
-              <a
-                href="https://www.linkedin.com/in/uvcables"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__social-btn footer__social-btn--linkedin"
-                aria-label="Follow UV Cables on LinkedIn"
-              >
-                <LinkedInIcon />
-                <span>LinkedIn</span>
-              </a>
-
-              <a
-                href="https://www.instagram.com/uvcables"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__social-btn footer__social-btn--instagram"
-                aria-label="Follow UV Cables on Instagram"
-              >
-                <InstagramIcon />
-                <span>Instagram</span>
-              </a>
-
-              <a
-                href="https://uvcables.blogspot.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__social-btn footer__social-btn--blogger"
-                aria-label="Read our Blog"
-              >
-                <BloggerIcon />
-                <span>Blog</span>
-              </a>
-            </div>
           </div>
+          {/* END COLUMN 1 */}
 
-          {/* ── Product Links ── */}
+          {/* COLUMN 2 — Our Cables */}
           <div className="footer__products-col">
             <div className="footer__col-title">Our Cables</div>
             <div className="footer__links">
@@ -147,9 +140,10 @@ export default function Footer() {
               })}
             </div>
           </div>
+          {/* END COLUMN 2 */}
         </div>
 
-        {/* ── Bottom bar ── */}
+        {/* Bottom bar */}
         <div className="footer__bottom">
           <span>
             {"© " + year + " " + BRAND.name + ". All rights reserved."}

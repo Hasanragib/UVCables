@@ -137,7 +137,6 @@ export default function ContactPage() {
           <div className="container">
             {/* Header */}
             <div className="section-head">
-              <div className="section-label">Get In Touch</div>
               <h1 className="section-title" id="contact-heading">
                 Get a Quote
               </h1>

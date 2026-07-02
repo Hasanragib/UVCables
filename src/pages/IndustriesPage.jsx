@@ -227,7 +227,7 @@ export default function IndustriesPage() {
   return (
     <>
       <SEOHead
-        title="Industries We Supply"
+        title="Industries We Serve"
         description="United Values Cables supplies industrial cables to power utilities, construction, mining, automation, solar energy, EV charging, steel plants, and chemical industries across Delhi NCR."
         path="/industries"
       />
@@ -236,14 +236,13 @@ export default function IndustriesPage() {
         <section className="section" aria-labelledby="industries-heading">
           <div className="container">
             <div className="section-head">
-              <div className="section-label">We Serve</div>
               <h1 className="section-title" id="industries-heading">
-                Industries We Supply To
+                Industries We Serve
               </h1>
               <p className="section-desc">
-                Our cable range covers virtually every industrial sector — from
-                power distribution to new-energy infrastructure. Click any
-                industry to see relevant cables.
+                From power utilities to solar energy — our cables are built for
+                every industrial sector. Click any industry to see relevant
+                cables.
               </p>
             </div>
 
@@ -252,7 +251,7 @@ export default function IndustriesPage() {
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
                 gap: 1,
-                background: "var(--bg-border)",
+                background: "var(--bg-white)",
                 border: "var(--border)",
                 borderRadius: "var(--radius-lg)",
                 overflow: "hidden",
