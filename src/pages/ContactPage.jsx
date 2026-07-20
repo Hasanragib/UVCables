@@ -379,7 +379,7 @@ export default function ContactPage() {
                     {
                       icon: "🕐",
                       label: "Hours",
-                      value: "Mon–Sat, 9AM–6PM IST",
+                      value: "Mon–Sat, 9 AM – 6 PM IST",
                       href: null,
                     },
                   ].map((c) => (
@@ -400,6 +400,46 @@ export default function ContactPage() {
                       </div>
                     </div>
                   ))}
+
+                  <br />
+                  <a
+                    href="/UV_Cables_Company_Profile.pdf"
+                    download="UV_Cables_Company_Profile.pdf"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "var(--space-2)",
+                      padding: "var(--space-3) var(--space-4)",
+                      background: "var(--bg-subtle)",
+                      border: "var(--border)",
+                      borderRadius: "var(--radius-md)",
+                      textDecoration: "none",
+                      fontSize: 12,
+                      fontWeight: 500,
+                      color: "var(--text-body)",
+                      transition: "all 0.15s",
+                    }}
+                    onMouseEnter={function (e) {
+                      e.currentTarget.style.borderColor = "var(--copper)";
+                      e.currentTarget.style.color = "var(--copper)";
+                    }}
+                    onMouseLeave={function (e) {
+                      e.currentTarget.style.borderColor = "";
+                      e.currentTarget.style.color = "";
+                    }}
+                  >
+                    <span>📄</span>
+                    <span>Company Profile</span>
+                    <span
+                      style={{
+                        marginLeft: "auto",
+                        fontSize: 11,
+                        color: "var(--text-faint)",
+                      }}
+                    >
+                      ↓ View PDF
+                    </span>
+                  </a>
                 </div>
 
                 {/* What to include */}

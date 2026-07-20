@@ -116,7 +116,7 @@ export default function Footer() {
               </a>
               <div className="footer__contact-row">
                 <span>🕐</span>
-                <span>Mon–Sat, 9AM–6PM IST</span>
+                <span>Mon–Sat, 9 AM – 6 PM IST</span>
               </div>
             </div>
           </div>
@@ -148,6 +148,7 @@ export default function Footer() {
           <span>
             {"© " + year + " " + BRAND.name + ". All rights reserved."}
           </span>
+
           <a
             href={mapsUrl}
             target="_blank"

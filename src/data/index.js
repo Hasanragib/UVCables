@@ -20,7 +20,7 @@ export const BRAND = {
   short: "UVC",
   tagline: "EST. 1986 | Powering Industry",
   location: "Delhi NCR",
-  phone: "+919818088873",
+  phone: "+91 9818088873",
   email: "info@uvcables.com",
   address:
     "27/1/2, Street No. 10, Park Side, Sangam Vihar, Delhi-110084, India",

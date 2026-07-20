@@ -100,6 +100,51 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
+              {/* Company Profile Download */}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "var(--space-4)",
+                  background: "var(--bg-subtle)",
+                  border: "var(--border)",
+                  borderLeft: "3px solid var(--copper)",
+                  borderRadius: "var(--radius-md)",
+                  padding: "var(--space-4) var(--space-5)",
+                  marginTop: "var(--space-8)",
+                  flexWrap: "wrap",
+                }}
+              >
+                <div style={{ fontSize: 32 }}>📄</div>
+                <div style={{ flex: 1 }}>
+                  <div
+                    style={{
+                      fontWeight: 800,
+                      fontSize: 14,
+                      color: "var(--text-heading)",
+                      marginBottom: 2,
+                    }}
+                  >
+                    Company Profile | UV Cables
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: "var(--text-muted)",
+                    }}
+                  >
+                    View Product Specifications, GST & Business Details
+                  </div>
+                </div>
+                <a
+                  href="/UV_Cables_Company_Profile.pdf"
+                  download="UV_Cables_Company_Profile.pdf"
+                  className="btn btn--primary btn--sm"
+                  aria-label="Download UV Cables Company Profile PDF"
+                >
+                  Download PDF
+                </a>
+              </div>
             </div>
           </div>
         </section>
