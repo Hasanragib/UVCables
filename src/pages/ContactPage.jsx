@@ -404,7 +404,7 @@ export default function ContactPage() {
                   <br />
                   <a
                     href="/UV_Cables_Company_Profile.pdf"
-                    download="UV_Cables_Company_Profile.pdf"
+                    download="UV_Cables_brochure.pdf"
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -429,7 +429,7 @@ export default function ContactPage() {
                     }}
                   >
                     <span>📄</span>
-                    <span>Company Profile</span>
+                    <span>Company Brochure</span>
                     <span
                       style={{
                         marginLeft: "auto",

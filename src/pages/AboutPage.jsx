@@ -125,7 +125,7 @@ export default function AboutPage() {
                       marginBottom: 2,
                     }}
                   >
-                    Company Profile | UV Cables
+                    Brochure | UV Cables
                   </div>
                   <div
                     style={{
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 </div>
                 <a
                   href="/UV_Cables_Company_Profile.pdf"
-                  download="UV_Cables_Company_Profile.pdf"
+                  download="UV_Cables_brochure.pdf"
                   className="btn btn--primary btn--sm"
                   aria-label="Download UV Cables Company Profile PDF"
                 >

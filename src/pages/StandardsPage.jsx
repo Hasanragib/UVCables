@@ -18,7 +18,7 @@ export default function StandardsPage() {
             <div className="section-head">
               <div className="section-label">Compliance Reference</div>
               <h1 className="section-title" id="standards-heading">
-                IS / IEC Standards We Follow
+                IS / IEC Standards
               </h1>
               <p className="section-desc">
                 Quick reference to applicable Indian Standards (IS) and
