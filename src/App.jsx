@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AppProvider } from "./context/AppContext.jsx";
-import WhatsAppFloat from "./components/WhatsAppFloat.jsx";
+import WhatsAppFloat from "./components/Whatsappfloat.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Toast from "./components/Toast.jsx";
