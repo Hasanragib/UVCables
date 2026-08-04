@@ -125,7 +125,7 @@ export default function ContactPage() {
     <>
       <SEOHead
         title="Get a Quote"
-        description="Request a cable quote from UV Cables, Delhi NCR. PVC, XLPE, EPR, Solar, EV, PTFE(Teflon), Control Cables & Silicone Tubes. B2B manufacturers and retailers."
+        description="Request a bulk or custom cable quote from UV Cables. Fast pricing on PVC, XLPE, Silicone, EPR/PCP, Solar, EV & PTFE cables, and custom profiles for B2B buyers."
         path="/contact"
       />
 
@@ -234,7 +234,7 @@ export default function ContactPage() {
                           <option value="">— Select Cable —</option>
                           {PRODUCTS.map((p) => (
                             <option key={p.id} value={p.id}>
-                              {p.label} ({p.isDisplay})
+                              {p.label}
                             </option>
                           ))}
                           <option value="multiple">Multiple / Not Sure</option>
@@ -453,7 +453,6 @@ export default function ContactPage() {
                     "Conductor cross-section (sq.mm)",
                     "Number of cores",
                     "Total length / quantity",
-                    "IS / IEC standard required",
                     "Delivery location is all over India",
                   ].map((tip) => (
                     <div key={tip} className="contact-tip">

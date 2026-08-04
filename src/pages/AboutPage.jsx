@@ -7,32 +7,32 @@ const HIGHLIGHTS = [
   {
     icon: "📅",
     label: "Established 1986",
-    desc: "Over three decades of cable manufacturing.",
+    desc: "Nearly four decades of cable industry experience.",
   },
   {
     icon: "🏗️",
     label: "Custom Lengths & Specs",
-    desc: "Any conductor size, any length — manufactured to your order.",
+    desc: "Any conductor cross-section, any length — built to your requirement.",
   },
   {
     icon: "🚚",
     label: "Pan India Delivery",
-    desc: "Reliable, prompt supply to manufacturers and retail trade.",
+    desc: "Reliable, prompt supply to OEMs, contractors, and trade distributors nationwide.",
   },
   {
     icon: "🤝",
     label: "B2B Manufacturer",
-    desc: "Dedicated supply to other manufacturers and distributors.",
+    desc: "Focused B2B supply for OEMs, infrastructure projects, and trade partners.",
   },
   {
     icon: "⚡",
     label: "Fast Order Processing",
-    desc: "Lean operations mean quicker turnaround than larger players.",
+    desc: "Agile manufacturing operations ensure rapid order processing and quick dispatch.",
   },
   {
     icon: "📐",
-    label: "Cables",
-    desc: "From PVC to EV charging — we cover the industrial spectrum.",
+    label: "Comprehensive Range",
+    desc: "From standard PVC to specialized Silicone, EPR, and EV charging cables.",
   },
 ];
 
@@ -40,8 +40,8 @@ export default function AboutPage() {
   return (
     <>
       <SEOHead
-        title="About United Values Cables"
-        description="United Values Cables — B2B cable manufacturer in Delhi NCR since 1986. We supply PVC, XLPE, Silicone, EPR, Butyl, Rubber, Trailing, Control, EV and Solar cables to manufacturers and retailers."
+        title="About Us"
+        description="UV Cables (United Values Cables) — Trusted B2B industrial cable supplier since 1986. Specializing in standard & custom PVC, XLPE, Silicone, EPR/PCP & PTFE cables across India."
         path="/about"
       />
 
@@ -57,23 +57,26 @@ export default function AboutPage() {
                   Precision Engineering, Decades of Reliability.
                 </h1>
                 <p className="about__text">
-                  UV Cables is a Delhi NCR-based cable manufacturer supplying a
-                  wide range of industrial cables to other manufacturers and
-                  retail distributors. Established in 1986, we have spent nearly
-                  four decades mastering the craft of cable production.
+                  UV Cables is a Delhi NCR-based cable manufacturer and
+                  industrial supplier, delivering high-performance wiring
+                  solutions to OEMs, contractors, and trade distributors across
+                  India. Established in 1986, we have spent nearly four decades
+                  mastering the craft of specialized cable production.
                 </p>
                 <p className="about__text">
-                  Our focus is quality construction, quick turnaround, and
-                  competitive pricing — without the overhead of large-scale
-                  certification processes. We are a lean, focused manufacturer
-                  that keeps things simple: make a good product, deliver it on
-                  time, and stand behind it.
+                  Our focus is quality engineering, rapid turnaround, and
+                  competitive factory pricing. As a lean, focused manufacturer,
+                  our philosophy is straightforward: build reliable products,
+                  ensure fast dispatch, and stand firmly behind every meter we
+                  supply.
                 </p>
                 <p className="about__text">
-                  We produce cables across PVC, XLPE, Silicone, EPR/PCP, Butyl
-                  Rubber, Rubber, Trailing &amp; Reeling, Control, EV Charging,
-                  Solar DC, PTFE (Teflon), and Silicone Tubes &amp; Profiles —
-                  covering virtually every industrial wiring need in the market.
+                  We manufacture and supply across a comprehensive range
+                  including PVC, XLPE, Silicone, EPR/PCP, Butyl Rubber, Trailing
+                  & Reeling, Control, EV Charging, Solar DC, PTFE (Teflon), and
+                  Silicone Profiles — meeting demanding requirements across
+                  extreme heat, heavy duty, and specialized industrial
+                  applications.
                 </p>
 
                 <div className="about__highlights">
@@ -133,7 +136,8 @@ export default function AboutPage() {
                       color: "var(--text-muted)",
                     }}
                   >
-                    View Product Specifications, GST & Business Details
+                    View Product Catalog, Technical Specifications & Company
+                    Details
                   </div>
                 </div>
                 <a
@@ -167,22 +171,32 @@ export default function AboutPage() {
                 {
                   icon: "🎯",
                   name: "Quality First",
-                  desc: "Every cable is manufactured to consistent quality standards, regardless of order size.",
+                  desc: "Every meter of cable is manufactured to rigorous, consistent quality standards, regardless of batch size.",
                 },
                 {
                   icon: "💡",
                   name: "Transparency",
-                  desc: "We are upfront about our capabilities and limitations. No overselling, no false promises.",
+                  desc: "Direct, upfront communication regarding specifications, pricing, and timelines. Honest commitments you can always depend on.",
                 },
                 {
                   icon: "🤝",
                   name: "Long-term Partnerships",
-                  desc: "We aim to be your reliable supply partner, not just a one-time vendor.",
+                  desc: "We build lasting B2B relationships by acting as a trusted, dependable supply partner for your ongoing industrial needs.",
                 },
                 {
                   icon: "⚡",
                   name: "Responsiveness",
-                  desc: "Quick quotes, fast production, and prompt delivery. We respect your timelines.",
+                  desc: "Rapid quotation, agile production cycles, and fast dispatch—ensuring your projects stay on schedule.",
+                },
+                {
+                  icon: "⚙️",
+                  name: "Custom Engineering",
+                  desc: "Tailored manufacturing for non-standard specs, specialized insulation, and exact cross-sectional requirements.",
+                },
+                {
+                  icon: "🛡️",
+                  name: "Supply Chain Reliability",
+                  desc: "Dependable dispatch and consistent material standards that keep your manufacturing lines and projects running without interruption.",
                 },
               ].map((v) => (
                 <div key={v.name} className="industry-card">
@@ -210,7 +224,7 @@ export default function AboutPage() {
                 marginBottom: 12,
               }}
             >
-              Ready to discuss your requirements?
+              Ready to Discuss Your Cable Requirements?
             </h2>
             <p
               style={{
@@ -220,8 +234,9 @@ export default function AboutPage() {
                 lineHeight: 1.7,
               }}
             >
-              Whether you need a regular supply of standard cables or a custom
-              specification, we're happy to talk.
+              Whether you need a steady bulk supply of standard cables or
+              custom-engineered specs, our sales and engineering team is ready
+              to assist.
             </p>
             <div
               style={{

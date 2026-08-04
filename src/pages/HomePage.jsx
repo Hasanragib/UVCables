@@ -15,8 +15,8 @@ export default function HomePage() {
   return (
     <>
       <SEOHead
-        title="Industrial Cable Manufacturer Delhi NCR"
-        description="United Values Cables — B2B cable manufacturer since 1986. PVC, XLPE, Silicone, EPR/PCP, Solar & EV cables. Supplying manufacturers and retailers across Delhi NCR."
+        title="B2B Industrial Cable Manufacturer"
+        description="UV Cables (United Values Cables) — B2B industrial cable supplier since 1986. Standard & custom PVC, XLPE, Silicone, EPR/PCP, Solar, EV, PTFE (Teflon) cables & Silicone profiles."
         path="/"
       />
 
@@ -55,6 +55,15 @@ export default function HomePage() {
                 <span className="uc-btn__label">{uc.label}</span>
               </Link>
             ))}
+          </div>
+          <div style={{ textAlign: "center", marginTop: 40 }}>
+            <Link
+              to="/cableSelector"
+              className="btn btn--navy"
+              style={{ fontSize: 15, padding: "13px 28px" }}
+            >
+              Not sure which cable? Use our Cable Finder →
+            </Link>
           </div>
         </div>
       </section>
@@ -95,7 +104,7 @@ export default function HomePage() {
           <div className="section-head">
             <div className="section-label">Why Us</div>
             <h2 className="section-title" id="why-heading">
-              Built on Three Decades of Trust
+              Built on Four Decades of Trust
             </h2>
             <p className="section-desc">
               A focused manufacturer committed to quality, flexibility, and fast
@@ -107,7 +116,7 @@ export default function HomePage() {
               {
                 icon: "📅",
                 name: "Est. 1986",
-                desc: "Four decades of cable manufacturing experience in Delhi NCR.",
+                desc: "Nearly 40 years of cable industry experience.",
               },
               {
                 icon: "🔧",
@@ -121,13 +130,13 @@ export default function HomePage() {
               },
               {
                 icon: "🤝",
-                name: "B2B Focus",
-                desc: "Dedicated to other manufacturers and trade distributors.",
+                name: "Client-Centric Support",
+                desc: "Dedicated guidance for OEMs, contractors, and trade distributors from inquiry to delivery.",
               },
               {
                 icon: "⚡",
                 name: "Fast Turnaround",
-                desc: "Quick order processing without large-corporate delays.",
+                desc: "Agile order processing, rapid production cycles, and quick dispatch.",
               },
               {
                 icon: "📐",
@@ -190,27 +199,26 @@ export default function HomePage() {
               letterSpacing: "-0.025em",
             }}
           >
-            Need a Cable Quote?
+            Let's Work Together
           </h2>
           <p
             style={{
               color: "rgba(255,255,255,0.65)",
-              fontSize: 15,
+              fontSize: 14,
               marginBottom: 28,
               maxWidth: 480,
               margin: "0 auto 28px",
             }}
           >
-            Tell us your specifications — voltage, conductor size, length, IS
-            standard — and we'll respond within 1 business day with pricing and
-            availability.
+            Trusted partner for continuous, heat-resistant cable supply
+            engineered to withstand extreme thermal environments.
           </p>
           <Link
             to="/contact"
             className="btn btn--primary"
             style={{ fontSize: 15, padding: "13px 32px" }}
           >
-            Get a Quote →
+            Contact →
           </Link>
         </div>
       </section>

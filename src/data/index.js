@@ -171,7 +171,7 @@ export const STANDARDS_TABLE = [
   {
     std: "Customer Spec",
     scope:
-      "PTFE / Teflon cables and silicone profiles manufactured to buyer's drawing and specification",
+      "PTFE / Teflon cables and silicone profiles supplied to buyer's drawing and custom specifications",
     cables: "PTFE Cables, Silicone Tubes",
   },
 ];
@@ -541,7 +541,7 @@ export const INDUSTRIES = [
 export const HERO_SLIDES = [
   {
     id: 1,
-    headline: "Industrial Cable Solutions",
+    headline: "Welcome to UV Cables",
     sub: "Precision-wound. Industry-proven.",
     desc: "PVC, XLPE, EPR/PCP, Silicone, PTFE(Teflon) and more.",
     image: CableTower,
@@ -563,7 +563,7 @@ export const HERO_SLIDES = [
     id: 3,
     headline: "Custom to Your Specs",
     sub: "Any length. Any Cross-Section.",
-    desc: "We manufacture cables to your exact requirements — conductor size, core count, armoring, and length.",
+    desc: "Supplying cables customized to your exact requirements — including conductor size, core count, armoring, and overall length.",
     image: CableStriping,
     imageAlt: "Stripped Cable",
     cta: "Explore Products",

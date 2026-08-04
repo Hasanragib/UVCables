@@ -6,9 +6,9 @@ export default function StandardsPage() {
   return (
     <>
       <SEOHead
-        title="IS & IEC Cable Standards Reference"
-        description="Complete reference for IS 694, IS 1554, IS 7098, IS 9968, IEC 62930, IEC 62893 — Indian and international standards applicable to our industrial cable range."
-        path="/standards"
+        title="Technical References"
+        description="Technical lookup for IS 694, IS 1554, IS 7098, IS 9968, IEC 62930, IEC 62893 — Indian and international specifications for our industrial cable range."
+        path="/technicalReference"
       />
 
       <main style={{ paddingTop: "var(--nav-h)" }}>
@@ -16,14 +16,24 @@ export default function StandardsPage() {
         <section className="section" aria-labelledby="standards-heading">
           <div className="container">
             <div className="section-head">
-              <div className="section-label">Compliance Reference</div>
+              <div className="section-label">TECHNICAL REFERENCE GUIDE</div>
               <h1 className="section-title" id="standards-heading">
-                IS / IEC Standards
+                IS / IEC Technical Specifications
               </h1>
-              <p className="section-desc">
-                Quick reference to applicable Indian Standards (IS) and
-                International Electrotechnical Commission (IEC) standards for
-                each cable type we manufacture.
+              <p style={{ fontSize: "14px" }} className="section-desc">
+                Quick reference guide to dimensional, electrical, and
+                constructional parameters defined under Indian (IS) and
+                International (IEC) cable standards.
+              </p>
+
+              <p
+                style={{ fontSize: "14px", marginTop: "8px" }}
+                className="section-desc"
+              >
+                <strong>
+                  All cables are supplied to align with standard industry
+                  technical parameters.
+                </strong>
               </p>
             </div>
 
@@ -34,9 +44,11 @@ export default function StandardsPage() {
               aria-label="Standards reference table"
             >
               <div className="std-table__head" role="row">
-                <div role="columnheader">Standard</div>
-                <div role="columnheader">Scope</div>
-                <div role="columnheader">Applicable Cables</div>
+                <div role="columnheader">Standard Code</div>
+                <div style={{ marginLeft: "1.15rem" }} role="columnheader">
+                  Technical Scope
+                </div>
+                <div role="columnheader">Product Line</div>
               </div>
               {STANDARDS_TABLE.map((row, i) => (
                 <div
@@ -66,12 +78,12 @@ export default function StandardsPage() {
         >
           <div className="container">
             <div className="section-head">
-              <div className="section-label">Per Product</div>
               <h2 className="section-title" id="per-product-heading">
-                Standard by Cable Type
+                Standards Lookup by Cable Type
               </h2>
               <p className="section-desc">
-                Each product mapped to its applicable IS / IEC standard.
+                Product categories mapped to their primary IS / IEC reference
+                specifications.
               </p>
             </div>
 
@@ -118,7 +130,7 @@ export default function StandardsPage() {
           </div>
         </section>
 
-        {/* Note */}
+        {/* Technical Guidance Note */}
         <section className="section" aria-labelledby="note-heading">
           <div className="container" style={{ maxWidth: 900 }}>
             <div
@@ -138,34 +150,40 @@ export default function StandardsPage() {
                   marginBottom: 12,
                 }}
               >
-                ℹ️ A note on standards compliance
+                ℹ️ Technical & Specification Reference
               </h2>
               <ul
                 style={{
                   color: "var(--text-muted)",
                   lineHeight: 1.8,
                   fontSize: 14,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "12px",
                 }}
               >
                 <li>
-                  Compliance: UV Cables is a specialized B2B manufacturer. While
-                  we do not hold formal IS or IEC certification, our products
-                  are manufactured in strict accordance with the specifications
-                  defined in these standards.
-                </li>
-                <br />
-                <li>
-                  Customization: All orders can be tailored to customer-supplied
-                  drawings and technical specifications.
-                </li>
-                <br />
-                <li>
-                  Flexible MOQs: We offer custom Minimum Order Quantities (MOQs)
-                  tailored to your specific project needs.
+                  <strong>Technical Benchmarks:</strong> UV Cables operates as a
+                  specialized B2B industrial cable supplier. The standard codes
+                  listed above represent the technical constructional,
+                  dimensional, and performance benchmarks to which our cable
+                  range is supplied.
                 </li>
                 <li>
-                  Certifications: For formal certification requirements, please
-                  discuss your needs with our team prior to placing an order.
+                  <strong>Custom Engineering:</strong> Products can be tailored
+                  to buyer-provided drawings, core color schemes, shielding
+                  specifications, and conductor sizes.
+                </li>
+                <li>
+                  <strong>Order Quantities:</strong> We support flexible Minimum
+                  Order Quantities (MOQs) tailored to project requirements and
+                  custom cut lengths.
+                </li>
+                <li>
+                  <strong>Project Verification:</strong> For specialized project
+                  compliance or specific test certificate requests, please
+                  coordinate with our sales engineering team prior to order
+                  placement.
                 </li>
               </ul>
             </div>

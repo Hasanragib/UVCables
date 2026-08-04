@@ -7,10 +7,10 @@ import CompanyLogo from "../assets/CompanyLogo.webp";
 
 const NAV_LINKS = [
   { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
   { to: "/products", label: "Products" },
   { to: "/industries", label: "Industries" },
-  { to: "/standards", label: "IS Standards" },
-  { to: "/about", label: "About" },
+  { to: "/technicalReference", label: "References" },
   { to: "/contact", label: "Contact" },
 ];
 
@@ -76,18 +76,18 @@ export default function Navbar() {
               onClick={() => setDrawerOpen(true)}
               aria-label={`Open enquiry list, ${enquiryCount} items`}
             >
-              📋 Enquiry
+              Enquiry
               {enquiryCount > 0 && (
                 <span className="navbar__badge">{enquiryCount}</span>
               )}
             </button>
 
-            <Link
+            {/* <Link
               to="/contact"
               className="btn btn--primary btn--sm navbar__cta"
             >
               Get a Quote
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Hamburger + enquiry icon on mobile */}

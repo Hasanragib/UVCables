@@ -66,7 +66,7 @@
 /* Links */
 .navbar__links {
   display: flex;
-  margin-left: 5rem;
+  margin-left: 14.2rem;
   align-items: center;
   gap: var(--space-1);
 }
@@ -147,21 +147,24 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   background: var(--bg-subtle);
   border: var(--border);
   color: var(--text-body);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 7px 14px;
-  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   font-family: var(--font-sans);
-  transition: background 0.15s;
 }
 
 .navbar__enquiry:hover {
-  background: var(--bg-border);
+  border-color: var(--copper);
+  color: var(--copper);
+  background: var(--copper-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .navbar__enquiry--mobile {

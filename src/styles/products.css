@@ -31,9 +31,9 @@
   font-family: var(--font-sans);
 }
 
-.mode-btn:hover {
+/* .mode-btn:hover {
   color: var(--text-heading);
-}
+} */
 
 .mode-btn--active {
   background: var(--navy);
@@ -281,7 +281,6 @@
     font-size: 12px;
   }
 }
-
 
 /* ============================================================
    USE CASE CATEGORY BUTTONS (icon + label, no images)

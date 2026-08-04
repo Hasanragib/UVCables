@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import SEOHead from "../components/SEOHead.jsx";
 import ProductCard from "../components/ProductCard.jsx";
 import ProductModal from "../components/ProductModal.jsx";
@@ -68,6 +68,15 @@ export default function ProductsPage() {
                 Filter by use case or IS / IEC standard. Click any card to view
                 full specifications and add to your enquiry list.
               </p>
+              <div style={{ marginTop: 20 }}>
+                <Link
+                  to="/cableSelector"
+                  className="uc-btn"
+                  style={{ fontSize: 14, fontWeight: 700, gap: 8 }}
+                >
+                  Not sure which cable? Try our Cable Finder →
+                </Link>
+              </div>
             </div>
 
             {/* ── Mode toggle ── */}

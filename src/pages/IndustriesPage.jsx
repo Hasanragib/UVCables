@@ -279,20 +279,23 @@ export default function IndustriesPage() {
                 marginBottom: 12,
               }}
             >
-              Don't see your industry listed?
+              Have a Specific Industrial Requirement?
             </h2>
             <p
               style={{
                 color: "rgba(255,255,255,0.8)",
                 fontSize: 15,
+                maxWidth: 480,
                 marginBottom: 28,
+                margin: "0 auto 28px",
               }}
             >
-              We're happy to discuss your specific cable requirements. Get in
-              touch with us.
+              From high-temperature environments to custom insulation standards,
+              our technical team is ready to design and deliver to your
+              specifications.
             </p>
             <Link to="/contact" className="btn btn--ghost">
-              Contact Us →
+              Discuss Your Specs →
             </Link>
           </div>
         </section>

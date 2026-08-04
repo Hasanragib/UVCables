@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AppProvider } from "./context/AppContext.jsx";
+import WhatsAppFloat from "./components/WhatsAppFloat.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Toast from "./components/Toast.jsx";
@@ -11,6 +12,7 @@ import IndustriesPage from "./pages/IndustriesPage.jsx";
 import StandardsPage from "./pages/StandardsPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import CableSelectorPage from "./pages/CableSelectorPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 export default function App() {
@@ -23,13 +25,15 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/standards" element={<StandardsPage />} />
+          <Route path="/technicalReference" element={<StandardsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/cableSelector" element={<CableSelectorPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
         <Toast />
+        <WhatsAppFloat />
       </AppProvider>
     </HelmetProvider>
   );
