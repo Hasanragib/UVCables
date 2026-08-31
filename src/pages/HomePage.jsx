@@ -56,13 +56,12 @@ export default function HomePage() {
               </Link>
             ))}
           </div>
-          <div style={{ textAlign: "center", marginTop: 40 }}>
+          <div className="cable-finder-cta">
             <Link
               to="/cableSelector"
-              className="btn btn--navy"
-              style={{ fontSize: 15, padding: "13px 28px" }}
+              className="btn btn--navy cable-finder-btn"
             >
-              Not sure which cable? Use our Cable Finder →
+              🔍 Not sure which cable? Use our Cable Finder →
             </Link>
           </div>
         </div>

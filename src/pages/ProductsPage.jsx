@@ -68,13 +68,12 @@ export default function ProductsPage() {
                 Filter by use case or IS / IEC standard. Click any card to view
                 full specifications and add to your enquiry list.
               </p>
-              <div style={{ marginTop: 20 }}>
+              <div className="cable-finder-cta">
                 <Link
                   to="/cableSelector"
-                  className="uc-btn"
-                  style={{ fontSize: 14, fontWeight: 700, gap: 8 }}
+                  className="btn btn--ghost cable-finder-btn"
                 >
-                  Not sure which cable? Try our Cable Finder →
+                  🔍 Not sure which cable? Try our Cable Finder →
                 </Link>
               </div>
             </div>

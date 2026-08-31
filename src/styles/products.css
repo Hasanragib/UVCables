@@ -357,3 +357,31 @@
     font-size: 16px;
   }
 }
+
+/* ── Cable Finder CTA ── */
+.cable-finder-cta {
+  text-align: center;
+  margin-top: var(--space-8);
+  padding: 0 var(--space-4);
+}
+
+.cable-finder-btn {
+  font-size: 14px;
+  padding: 12px 24px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+@media (max-width: 480px) {
+  .cable-finder-btn {
+    width: 100%;
+    font-size: 13px;
+    padding: 11px 16px;
+  }
+}
