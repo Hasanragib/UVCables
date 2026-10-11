@@ -2,30 +2,24 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import SEOHead from "../components/SEOHead.jsx";
 import ProductCard from "../components/ProductCard.jsx";
-import ProductModal from "../components/ProductModal.jsx";
 import { useApp } from "../context/AppContext.jsx";
 import "../styles/products.css";
 import "../styles/sections.css";
 
 export default function ProductsPage() {
   const {
-    filterMode,
-    setFilterMode,
     ucFilter,
     setUcFilter,
-    isFilter,
-    setIsFilter,
     USE_CASES,
-    IS_STANDARDS,
     filteredProducts,
     activeUCLabel,
-    activeISLabel,
-    hasActiveFilter,
     resetFilters,
+    setFilterMode,
   } = useApp();
 
   const location = useLocation();
 
+  // Scroll to product on hash
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.slice(1);
@@ -36,7 +30,7 @@ export default function ProductsPage() {
     }
   }, [location.hash]);
 
-  // ── NEW — Read ?uc= from URL and apply filter ────────────────
+  // Read ?uc= from URL and apply filter
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const uc = params.get("uc");
@@ -50,7 +44,7 @@ export default function ProductsPage() {
     <>
       <SEOHead
         title="Industrial Cable Products"
-        description="Browse PVC (IS 694), XLPE (IS 7098), EPR/PCP (IS 9968), Silicone, Control, Trailing, EV (IEC 62893) and Solar (IEC 62930) cables. Filter by use case or IS standard."
+        description="Browse PVC, XLPE, EPR/PCP, Silicone, Control, Trailing, EV and Solar DC cables plus Copper Ropes, Wires and Braided Copper. B2B cable manufacturer Delhi NCR."
         path="/products"
       />
 
@@ -60,60 +54,41 @@ export default function ProductsPage() {
           aria-labelledby="products-heading"
         >
           <div className="container">
+            {/* Heading */}
             <div className="section-head">
               <h1 className="section-title" id="products-heading">
                 Industrial Cables
               </h1>
               <p className="section-desc">
-                Filter by use case or IS / IEC standard. Click any card to view
-                full specifications and add to your enquiry list.
+                Click any product to view full specifications. Use our Cable
+                Finder if you are unsure which cable suits your application.
               </p>
               <div className="cable-finder-cta">
                 <Link
                   to="/cableSelector"
                   className="btn btn--ghost cable-finder-btn"
                 >
-                  🔍 Not sure which cable? Try our Cable Finder →
+                  Not sure which cable? Try our Cable Finder →
                 </Link>
               </div>
             </div>
 
-            {/* ── Mode toggle ── */}
-            <div className="mode-toggle-wrap">
-              <div
-                className="mode-toggle"
-                role="group"
-                aria-label="Filter mode"
-              >
-                <button
-                  className={`mode-btn${filterMode === "usecase" ? " mode-btn--active" : ""}`}
-                  onClick={() => setFilterMode("usecase")}
-                  aria-pressed={filterMode === "usecase"}
-                >
-                  🎯 Filter by Use Case
-                </button>
-                <button
-                  className={`mode-btn${filterMode === "is" ? " mode-btn--active" : ""}`}
-                  onClick={() => setFilterMode("is")}
-                  aria-pressed={filterMode === "is"}
-                >
-                  📋 Filter by IS / IEC Standard
-                </button>
-              </div>
-            </div>
-
-            {/* ── Use Case Buttons ── */}
-            {filterMode === "usecase" && (
-              <div
-                className="uc-btn-grid"
-                role="group"
-                aria-label="Filter by use case"
-              >
-                {USE_CASES.map((uc) => (
+            {/* Use Case filter buttons only */}
+            <div
+              className="uc-btn-grid"
+              role="group"
+              aria-label="Filter by use case"
+            >
+              {USE_CASES.map(function (uc) {
+                return (
                   <button
                     key={uc.id}
-                    className={`uc-btn${ucFilter === uc.id ? " uc-btn--active" : ""}`}
-                    onClick={() => setUcFilter(uc.id)}
+                    className={
+                      "uc-btn" + (ucFilter === uc.id ? " uc-btn--active" : "")
+                    }
+                    onClick={function () {
+                      setUcFilter(uc.id);
+                    }}
                     aria-pressed={ucFilter === uc.id}
                   >
                     <span className="uc-btn__icon" aria-hidden="true">
@@ -121,66 +96,32 @@ export default function ProductsPage() {
                     </span>
                     <span className="uc-btn__label">{uc.label}</span>
                   </button>
-                ))}
-              </div>
-            )}
+                );
+              })}
+            </div>
 
-            {/* ── IS Standard chips ── */}
-            {filterMode === "is" && (
-              <div
-                className="is-filter-bar"
-                role="group"
-                aria-label="IS standard filter"
-              >
-                {IS_STANDARDS.map((std) => (
-                  <button
-                    key={std.id}
-                    className={`is-chip${isFilter === std.id ? " is-chip--active" : ""}`}
-                    onClick={() => setIsFilter(std.id)}
-                    aria-pressed={isFilter === std.id}
-                  >
-                    <div className="is-chip__label">
-                      {std.icon} {std.label}
-                    </div>
-                    {std.desc && (
-                      <div className="is-chip__desc">{std.desc}</div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {/* ── Results bar ── */}
+            {/* Results bar */}
             <div className="results-bar">
               <span className="results-count">
                 {filteredProducts.length} cable
                 {filteredProducts.length !== 1 ? "s" : ""}
               </span>
-              {filterMode === "usecase" && ucFilter !== "all" && (
+              {ucFilter !== "all" && (
                 <span className="results-tag">
-                  {activeUCLabel?.icon} {activeUCLabel?.label}
+                  {activeUCLabel && activeUCLabel.icon}{" "}
+                  {activeUCLabel && activeUCLabel.label}
                   <button
                     className="results-tag__clear"
-                    onClick={() => setUcFilter("all")}
+                    onClick={function () {
+                      setUcFilter("all");
+                    }}
                     aria-label="Clear filter"
                   >
                     ✕
                   </button>
                 </span>
               )}
-              {filterMode === "is" && isFilter !== "all" && (
-                <span className="results-tag">
-                  {activeISLabel?.label}
-                  <button
-                    className="results-tag__clear"
-                    onClick={() => setIsFilter("all")}
-                    aria-label="Clear filter"
-                  >
-                    ✕
-                  </button>
-                </span>
-              )}
-              {hasActiveFilter && (
+              {ucFilter !== "all" && (
                 <button
                   onClick={resetFilters}
                   style={{
@@ -198,26 +139,25 @@ export default function ProductsPage() {
               )}
             </div>
 
-            {/* ── Product grid ── */}
+            {/* Product grid */}
             {filteredProducts.length === 0 ? (
               <div className="product-grid--empty" role="status">
                 No cables match this filter. Try a different category.
               </div>
             ) : (
               <div className="product-grid" id="product-grid">
-                {filteredProducts.map((p) => (
-                  <div key={p.id} id={p.id}>
-                    <ProductCard product={p} />
-                  </div>
-                ))}
+                {filteredProducts.map(function (p) {
+                  return (
+                    <div key={p.id} id={p.id}>
+                      <ProductCard product={p} />
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
         </section>
       </main>
-
-      {/* Global modal driven by context */}
-      <ProductModal />
     </>
   );
 }

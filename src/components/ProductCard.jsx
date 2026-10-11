@@ -1,16 +1,23 @@
-import { useApp } from '../context/AppContext.jsx';
-import { USE_CASES } from '../data/index.js';
+import { Link } from "react-router-dom";
+import { useApp } from "../context/AppContext.jsx";
+import { USE_CASES } from "../data/index.js";
 
 export default function ProductCard({ product }) {
-  const { openProduct, addToEnquiry, isInEnquiry } = useApp();
-  const primaryUseCase = USE_CASES.find(u => u.id === product.useCases[0]);
-  const inList = isInEnquiry(product.id);
+  var app = useApp();
+  var addToEnquiry = app.addToEnquiry;
+  var isInEnquiry = app.isInEnquiry;
+
+  var primaryUseCase = USE_CASES.find(function (u) {
+    return u.id === product.useCases[0];
+  });
+  var inList = isInEnquiry(product.id);
 
   return (
-    <article
+    <Link
+      to={"/products/" + product.id}
       className="product-card product-card--with-img"
-      role="article"
-      aria-label={product.label}
+      style={{ textDecoration: "none", display: "block" }}
+      aria-label={"View " + product.label + " details"}
     >
       {/* Image */}
       <div className="product-card__img-wrap">
@@ -25,16 +32,22 @@ export default function ProductCard({ product }) {
       </div>
 
       <div className="product-card__header">
-        <div className="product-card__dot" style={{ background: product.dot }} aria-hidden="true" />
+        <div
+          className="product-card__dot"
+          style={{ background: product.dot }}
+          aria-hidden="true"
+        />
         <span className="product-card__badge">
-          {primaryUseCase?.icon} {primaryUseCase?.label}
+          {primaryUseCase
+            ? primaryUseCase.icon + " " + primaryUseCase.label
+            : ""}
         </span>
       </div>
 
       <div className="product-card__short">{product.short}</div>
       <h3 className="product-card__name">{product.label}</h3>
       <p className="product-card__desc">
-        {product.description.substring(0, 90)}…
+        {product.description.substring(0, 90) + "…"}
       </p>
 
       <div className="product-card__is">📋 {product.isDisplay}</div>
@@ -45,37 +58,57 @@ export default function ProductCard({ product }) {
         aria-hidden="true"
       />
 
-      {/* Actions */}
-      <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-        <button
-          className="product-card__cta"
-          style={{ background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'var(--font-sans)', padding: 0, fontSize: 13, fontWeight: 700, color: 'var(--copper)' }}
-          onClick={() => openProduct(product)}
-          aria-label={`View ${product.label} specifications`}
+      {/* Bottom row */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: 8,
+        }}
+      >
+        {/* View Details hint */}
+        <span
+          style={{
+            fontSize: 13,
+            fontWeight: 700,
+            color: "var(--copper)",
+          }}
         >
-          View Specs →
-        </button>
+          View Details →
+        </span>
+
+        {/* Add to enquiry — stopPropagation so card link doesn't fire */}
         <button
           style={{
-            marginLeft: 'auto',
-            background: inList ? 'var(--navy)' : 'var(--bg-subtle)',
-            border: inList ? '1px solid var(--navy)' : 'var(--border)',
-            color: inList ? '#fff' : 'var(--text-muted)',
+            background: inList ? "var(--navy)" : "var(--bg-subtle)",
+            border: inList ? "1px solid var(--navy)" : "var(--border)",
+            color: inList ? "#fff" : "var(--text-muted)",
             fontSize: 11,
             fontWeight: 700,
-            padding: '4px 10px',
+            padding: "5px 12px",
             borderRadius: 100,
-            cursor: 'pointer',
-            fontFamily: 'var(--font-sans)',
-            transition: 'all 0.15s',
+            cursor: "pointer",
+            fontFamily: "var(--font-sans)",
+            transition: "all 0.15s",
+            flexShrink: 0,
           }}
-          onClick={() => addToEnquiry(product)}
-          aria-label={inList ? `${product.label} in enquiry list` : `Add ${product.label} to enquiry`}
+          onClick={function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            addToEnquiry(product);
+          }}
+          aria-label={
+            inList
+              ? product.label + " in enquiry list"
+              : "Add " + product.label + " to enquiry"
+          }
           aria-pressed={inList}
         >
-          {inList ? '✓ Added' : '+ Enquire'}
+          {inList ? "✓ Added" : "+ Enquire"}
         </button>
       </div>
-    </article>
+    </Link>
   );
 }

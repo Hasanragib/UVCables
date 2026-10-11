@@ -1,6 +1,6 @@
-import { useApp } from '../context/AppContext.jsx';
-import { Link } from 'react-router-dom';
-import '../styles/enquiry.css';
+import { useApp } from "../context/AppContext.jsx";
+import { Link } from "react-router-dom";
+import "../styles/enquiry.css";
 
 export default function EnquiryDrawer({ open, onClose }) {
   const { enquiryList, removeFromEnquiry, clearEnquiry } = useApp();
@@ -16,23 +16,27 @@ export default function EnquiryDrawer({ open, onClose }) {
         />
       )}
 
-      {/* Drawer */}
+      {/* Drawer — inert when closed prevents focus entering hidden drawer */}
       <aside
-        className={`enquiry-drawer${open ? ' enquiry-drawer--open' : ''}`}
+        className={"enquiry-drawer" + (open ? " enquiry-drawer--open" : "")}
         aria-label="Enquiry list"
         aria-hidden={!open}
+        {...(!open ? { inert: "" } : {})}
       >
         <div className="enquiry-drawer__header">
           <h2 className="enquiry-drawer__title">
             Enquiry List
             {enquiryList.length > 0 && (
-              <span className="enquiry-drawer__count">{enquiryList.length}</span>
+              <span className="enquiry-drawer__count">
+                {enquiryList.length}
+              </span>
             )}
           </h2>
           <button
             className="enquiry-drawer__close"
             onClick={onClose}
             aria-label="Close enquiry list"
+            tabIndex={open ? 0 : -1}
           >
             ✕
           </button>
@@ -47,25 +51,30 @@ export default function EnquiryDrawer({ open, onClose }) {
             </div>
           ) : (
             <ul className="enquiry-drawer__list">
-              {enquiryList.map(p => (
-                <li key={p.id} className="enquiry-item">
-                  <div
-                    className="enquiry-item__dot"
-                    style={{ background: p.dot }}
-                  />
-                  <div className="enquiry-item__info">
-                    <div className="enquiry-item__name">{p.label}</div>
-                    <div className="enquiry-item__std">📋 {p.isDisplay}</div>
-                  </div>
-                  <button
-                    className="enquiry-item__remove"
-                    onClick={() => removeFromEnquiry(p.id)}
-                    aria-label={`Remove ${p.label}`}
-                  >
-                    ✕
-                  </button>
-                </li>
-              ))}
+              {enquiryList.map(function (p) {
+                return (
+                  <li key={p.id} className="enquiry-item">
+                    <div
+                      className="enquiry-item__dot"
+                      style={{ background: p.dot }}
+                    />
+                    <div className="enquiry-item__info">
+                      <div className="enquiry-item__name">{p.label}</div>
+                      <div className="enquiry-item__std">📋 {p.isDisplay}</div>
+                    </div>
+                    <button
+                      className="enquiry-item__remove"
+                      onClick={function () {
+                        removeFromEnquiry(p.id);
+                      }}
+                      aria-label={"Remove " + p.label}
+                      tabIndex={open ? 0 : -1}
+                    >
+                      ✕
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>
@@ -75,14 +84,20 @@ export default function EnquiryDrawer({ open, onClose }) {
             <Link
               to="/contact"
               className="btn btn--primary"
-              style={{ width: '100%', justifyContent: 'center' }}
+              style={{ width: "100%", justifyContent: "center" }}
               onClick={onClose}
+              tabIndex={open ? 0 : -1}
             >
-              Request Quote for {enquiryList.length} Cable{enquiryList.length > 1 ? 's' : ''} →
+              {"Request Quote for " +
+                enquiryList.length +
+                " Cable" +
+                (enquiryList.length > 1 ? "s" : "") +
+                " →"}
             </Link>
             <button
               className="enquiry-drawer__clear"
               onClick={clearEnquiry}
+              tabIndex={open ? 0 : -1}
             >
               Clear all
             </button>

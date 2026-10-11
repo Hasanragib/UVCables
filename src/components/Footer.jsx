@@ -130,7 +130,7 @@ export default function Footer() {
                 return (
                   <Link
                     key={p.id}
-                    to={"/products#" + p.id}
+                    to={`/products/${p.id}`}
                     className="footer__link"
                   >
                     <span className="footer__link-arrow">▸</span>

@@ -29,9 +29,11 @@ export default function HeroSlider() {
 
   // Auto-advance every 3 seconds.
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000);
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 3000);
     return () => clearInterval(timer);
-  }, [nextSlide]);
+  }, []);
 
   return (
     <section className="hero" aria-label="Hero banner">
@@ -62,7 +64,6 @@ export default function HeroSlider() {
 
       {/* Content */}
       <div className="hero__content">
-        <div className="hero__badge">B2B Industrial Cable Manufacturer</div>
         <h1 className="hero__h1" key={heroSlide}>
           {slide.headline.split(" ").slice(0, -1).join(" ")}{" "}
           <span className="hero__accent">

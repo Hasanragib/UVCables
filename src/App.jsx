@@ -8,6 +8,7 @@ import Toast from "./components/Toast.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ProductsPage from "./pages/ProductsPage.jsx";
+import ProductDetailPage from "./pages/ProductDetailPage.jsx";
 import IndustriesPage from "./pages/IndustriesPage.jsx";
 import StandardsPage from "./pages/StandardsPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
@@ -25,6 +26,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/technicalReference" element={<StandardsPage />} />
           <Route path="/about" element={<AboutPage />} />

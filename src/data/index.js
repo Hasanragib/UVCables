@@ -1,7 +1,7 @@
 import BatteryCable_EV_HV from "../assets/BatteryCable_EV_HV.webp";
 import PVCControlCable from "../assets/PVCControlCable.webp";
 import TrailingCable from "../assets/TrailingCable.webp";
-import XLPE from "../assets/XLPE.webp";
+import XLPE from "../assets/XLPE3.webp";
 import PVCCable from "../assets/PVCCable.webp";
 import EPR_PCP from "../assets/EPR_PCP.webp";
 import SiliconeCable from "../assets/SiliconeCable.webp";
@@ -13,6 +13,9 @@ import SolarImage from "../assets/SolarImage.webp";
 import CableStriping from "../assets/CableStriping.webp";
 import SiliconeTubesProfiles from "../assets/SiliconeTubesProfiles.webp";
 import TeflonCable from "../assets/TeflonCable.webp";
+import CopperRope3 from "../assets/CopperRope3.webp";
+import CopperWire from "../assets/CopperWire1.webp";
+import CopperBraidWire from "../assets/CopperBraidWire2.webp";
 
 // ─── BRAND ───────────────────────────────────────────────────────────────────
 export const BRAND = {
@@ -186,7 +189,7 @@ export const PRODUCTS = [
     icon: "⚡",
     useCases: ["power", "wiring"],
     isStandards: ["is694", "is1554"],
-    isDisplay: "IS 694 / IS 1554 Pt.1",
+    isDisplay: " As per IS 694 / IS 1554 Pt.1",
     image: PVCCable,
     imageAlt: "PVC insulated cables coiled",
     metaDesc:
@@ -198,7 +201,7 @@ export const PRODUCTS = [
       "Temp Range: -15°C to +70°C",
       "Insulation: PVC (Type A/B/C)",
       "Conductor: Copper / Aluminium",
-      "Standards: IS 694, IS 1554 Pt.1",
+      "Standards: As per IS 694, IS 1554 Pt.1",
     ],
     applications: [
       "Industrial panels",
@@ -215,7 +218,7 @@ export const PRODUCTS = [
     icon: "🔌",
     useCases: ["power"],
     isStandards: ["is7098"],
-    isDisplay: "IS 7098 Pt.1 / Pt.2",
+    isDisplay: "As per IS 7098 Pt.1 / Pt.2",
     image: XLPE,
     imageAlt: "XLPE high voltage power cable",
     metaDesc:
@@ -227,7 +230,7 @@ export const PRODUCTS = [
       "Temp Range: Up to +90°C (continuous)",
       "Insulation: XLPE",
       "Armor: SWA / STA optional",
-      "Standards: IS 7098 Pt.1 & Pt.2",
+      "Standards: As per IS 7098 Pt.1 & Pt.2",
     ],
     applications: [
       "Power substations",
@@ -244,7 +247,7 @@ export const PRODUCTS = [
     icon: "🌡️",
     useCases: ["hightemp", "wiring"],
     isStandards: ["nostandard"],
-    isDisplay: "Customer Spec / BS 6500",
+    isDisplay: "Customer Spec",
     image: SiliconeCable,
     imageAlt: "Silicone high temperature cable",
     metaDesc:
@@ -273,7 +276,7 @@ export const PRODUCTS = [
     icon: "🟢",
     useCases: ["flexible", "power"],
     isStandards: ["is9968"],
-    isDisplay: "IS 9968 Pt.1 & Pt.2",
+    isDisplay: "As per IS 9968 Pt.1 & Pt.2",
     image: EPR_PCP,
     imageAlt: "EPR PCP flexible cable on drum",
     metaDesc:
@@ -297,7 +300,7 @@ export const PRODUCTS = [
     icon: "🔵",
     useCases: ["specialty", "hightemp"],
     isStandards: ["nostandard"],
-    isDisplay: "Customer Spec / IS 9968",
+    isDisplay: "Customer Spec / As per IS 9968",
     image: ButylCable,
     imageAlt: "Butyl rubber specialty cable chemical plant",
     metaDesc:
@@ -326,7 +329,7 @@ export const PRODUCTS = [
     icon: "🟠",
     useCases: ["flexible", "wiring"],
     isStandards: ["is9968"],
-    isDisplay: "IS 9968 Pt.1",
+    isDisplay: "As per IS 9968 Pt.1",
     image: RubberCable,
     imageAlt: "Rubber flexible cable for welding",
     metaDesc:
@@ -338,7 +341,7 @@ export const PRODUCTS = [
       "Temp Range: -25°C to +60°C",
       "Insulation: Natural/Synthetic Rubber",
       "Highly flexible construction",
-      "Standards: IS 9968 Pt.1",
+      "Standards: As per IS 9968 Pt.1",
     ],
     applications: [
       "Welding machines",
@@ -349,13 +352,13 @@ export const PRODUCTS = [
   },
   {
     id: "trailing",
-    label: "Trailing / Reeling Cables",
+    label: "Trailing Cables",
     short: "TRAIL",
     dot: "#B45309",
     icon: "🔶",
     useCases: ["flexible", "power"],
     isStandards: ["is9968"],
-    isDisplay: "IS 9968 Pt.2",
+    isDisplay: "As per IS 9968 Pt.1 & Pt.2",
     image: TrailingCable,
     imageAlt: "Trailing cable on reeling drum crane",
     metaDesc:
@@ -363,7 +366,7 @@ export const PRODUCTS = [
     description:
       "Heavy-duty trailing and reeling cables for continuous movement applications like overhead cranes, stackers, and mining equipment.",
     specs: [
-      "Voltage: Up to 3.3 kV",
+      "Voltage: Up to 6.6 kV",
       "Temp Range: -40°C to +85°C",
       "Insulation: EPR",
       "Sheath: PCP",
@@ -383,8 +386,8 @@ export const PRODUCTS = [
     dot: "#0891B2",
     icon: "🎛️",
     useCases: ["control", "wiring"],
-    isStandards: ["is1554"],
-    isDisplay: "IS 1554 Pt.2",
+    isStandards: ["asperIs"],
+    isDisplay: "As per IS",
     image: PVCControlCable,
     imageAlt: "Multi-core control cable PLC automation",
     metaDesc:
@@ -394,9 +397,9 @@ export const PRODUCTS = [
     specs: [
       "Voltage: Up to 1.1 kV",
       "Cores: 2 – 61 cores",
-      "Insulation: PVC / XLPE",
+      "Insulation: Silicone, EPR, PVC, XLPE",
       "Shielding: Overall Al-foil or Cu braid",
-      "Standards: IS 1554 Pt.2",
+      "Standards: As per IS",
     ],
     applications: [
       "PLC/DCS systems",
@@ -407,23 +410,22 @@ export const PRODUCTS = [
   },
   {
     id: "ev",
-    label: "EV Charging Cables",
+    label: "EV Cables",
     short: "EV",
     dot: "#059669",
     icon: "🔋",
     useCases: ["newenergy", "flexible"],
-    isStandards: ["iec62893"],
-    isDisplay: "IEC 62893",
+    isStandards: ["nostandard"],
+    isDisplay: "Customer Spec",
     image: BatteryCable_EV_HV,
-    imageAlt: "EV charging cable electric vehicle",
-    metaDesc:
-      "EV charging cables for AC/DC fast charging up to 200A. IEC 62893 compliant.",
+    imageAlt: "EV high voltage cable for electric vehicles",
+    metaDesc: "High-Voltage EV Cables for Advanced Battery & Motor Connections",
     description:
-      "Flexible, high-current EV charging cables for AC/DC fast charging stations. Designed for daily flexing, UV resistance, and safety at high power levels.",
+      "Power your electric drivetrain with our high-performance, high-voltage (HV) EV cables. Engineered specifically for the rigorous demands of battery-to-inverter and inverter-to-motor links.",
     specs: [
-      "Voltage: Up to 1 kV AC / 1.5 kV DC",
-      "Current: Up to 200A (DC fast charge)",
-      "Temp Range: -40°C to +90°C",
+      "Voltage: Up to 3.3 kV AC / 1.5 kV DC",
+      "Current: Up to 200A",
+      "Temp Range: -40°C to +150°C",
       "Jacket: Halogen-free TPE",
       "Standards: IEC 62893",
     ],
@@ -441,8 +443,8 @@ export const PRODUCTS = [
     dot: "#CA8A04",
     icon: "☀️",
     useCases: ["newenergy"],
-    isStandards: ["iec62930"],
-    isDisplay: "IEC 62930",
+    isStandards: ["nostandard"],
+    isDisplay: "Customer Spec",
     image: Solar_Cable,
     imageAlt: "Solar DC cable installation rooftop photovoltaic",
     metaDesc:
@@ -471,7 +473,7 @@ export const PRODUCTS = [
     icon: "🧪",
     useCases: ["specialty", "hightemp"],
     isStandards: ["nostandard"],
-    isDisplay: "Customer Spec / BS 6500",
+    isDisplay: "Customer Spec",
     image: TeflonCable,
     imageAlt: "PTFE Teflon cable insulation",
     metaDesc:
@@ -500,7 +502,7 @@ export const PRODUCTS = [
     icon: "⭕",
     useCases: ["hightemp", "specialty"],
     isStandards: ["nostandard"],
-    isDisplay: "Customer Spec/ IS 11149",
+    isDisplay: "Customer Spec",
     image: SiliconeTubesProfiles,
     imageAlt: "Silicone tubes and profiles industrial",
     metaDesc:
@@ -521,6 +523,93 @@ export const PRODUCTS = [
       "Food & pharma equipment",
     ],
   },
+  {
+    id: "copper-rope",
+    label: "Copper Ropes",
+    short: "Cu-ROPE",
+    dot: "#B87333",
+    icon: "🔩",
+    useCases: ["specialty", "wiring"],
+    isStandards: ["nostandard"],
+    isDisplay: "As Per IS 8130 / Customer Spec",
+    image: CopperRope3,
+    imageAlt: "Copper rope conductor",
+    metaDesc:
+      "Bare copper ropes for earthing, grounding, electrical connections and flexible conductor applications. Electrolytic grade copper.",
+    description:
+      "Bare copper ropes manufactured from electrolytic grade copper strands. Used for earthing, grounding, flexible electrical connections, and conductor applications requiring high conductivity and flexibility.",
+    specs: [
+      "Material: Electrolytic Grade Copper",
+      "Construction: Multi-strand rope lay",
+      "Sizes: 10 mm² to 400 mm²",
+      "Finish: Bare / Tinned",
+      "Standard: As Per IS 8130 / Customer Spec",
+    ],
+    applications: [
+      "Earthing & grounding systems",
+      "Flexible bus connections",
+      "Transformer connections",
+      "Battery cables",
+    ],
+  },
+  {
+    id: "copper-wire",
+    label: "Copper Wires",
+    short: "Cu-WIRE",
+    dot: "#C85A17",
+    icon: "〰️",
+    useCases: ["specialty", "wiring"],
+    isStandards: ["nostandard"],
+    isDisplay: "As Per IS 8130 / IS 1897",
+    image: CopperWire,
+    imageAlt: "Tinned copper wire conductor",
+    metaDesc:
+      "Tinned copper wires for cable manufacturing, electrical connections and general conductor applications. Electrolytic grade copper.",
+    description:
+      "Tinned electrolytic copper wires for use in cable manufacturing, electrical connections, winding applications, and general conductor use. Available in round and sector-shaped profiles.",
+    specs: [
+      "Material: Electrolytic Grade Copper",
+      "Sizes: 0.5 mm to 50 mm diameter",
+      "Finish: Bare / Tinned / Silver-plated",
+      "Temper: Soft / Hard / Half-hard",
+      "Standard: As Per IS 8130 / IS 1897",
+    ],
+    applications: [
+      "Cable conductor manufacturing",
+      "Motor winding",
+      "Electrical connections",
+      "Earthing systems",
+    ],
+  },
+  {
+    id: "braided-copper",
+    label: "Braided Copper Wires",
+    short: "Cu-BRAID",
+    dot: "#D97706",
+    icon: "🔗",
+    useCases: ["specialty", "flexible"],
+    isStandards: ["nostandard"],
+    isDisplay: "As per IS 8130 / Customer Spec",
+    image: CopperBraidWire,
+    imageAlt: "Braided tinned copper wire flexible connector",
+    metaDesc:
+      "Flexible braided tinned copper wire connectors and earthing straps for EMI shielding, earthing bonds, and flexible electrical connections.",
+    description:
+      "Flexible braided tinned copper wire assemblies for EMI/RFI shielding, earthing bonds, flexible bus bars, and vibration-resistant electrical connections. Available in flat braid, round braid, and custom configurations.",
+    specs: [
+      "Material: Electrolytic Grade Copper strands",
+      "Finish: Bare / Tinned",
+      "Construction: Flat braid / Round braid / Rope braid",
+      "Sizes: 10 mm² to 120 mm²",
+      "End fittings: Lugs / Bolted / Custom terminals",
+    ],
+    applications: [
+      "EMI / RFI shielding",
+      "Earthing bonds & straps",
+      "Flexible bus bar connections",
+      "Vibration-resistant connections",
+    ],
+  },
 ];
 
 // ─── INDUSTRIES ───────────────────────────────────────────────────────────────
@@ -530,7 +619,7 @@ export const INDUSTRIES = [
   { icon: "⛏️", name: "Mining", cables: "EPR/PCP, Trailing, Butyl" },
   { icon: "🤖", name: "Automation & OEM", cables: "Control, PVC, Silicone" },
   { icon: "🌞", name: "Solar Energy", cables: "Solar DC, XLPE" },
-  { icon: "🚗", name: "EV Infrastructure", cables: "EV Charging, XLPE" },
+  { icon: "🚗", name: "EV Infrastructure", cables: "EV High Voltage, XLPE" },
   { icon: "🔥", name: "Steel & Foundry", cables: "Silicone, Butyl Rubber" },
   { icon: "⚗️", name: "Chemical Plants", cables: "EPR, Butyl, PVC" },
   { icon: "🏭", name: "General Industry", cables: "All Types" },
