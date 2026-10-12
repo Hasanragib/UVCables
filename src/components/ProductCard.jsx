@@ -5,6 +5,7 @@ import { USE_CASES } from "../data/index.js";
 export default function ProductCard({ product }) {
   var app = useApp();
   var addToEnquiry = app.addToEnquiry;
+  var removeFromEnquiry = app.removeFromEnquiry;
   var isInEnquiry = app.isInEnquiry;
 
   var primaryUseCase = USE_CASES.find(function (u) {
@@ -97,7 +98,11 @@ export default function ProductCard({ product }) {
           onClick={function (e) {
             e.preventDefault();
             e.stopPropagation();
-            addToEnquiry(product);
+            if (inList) {
+              removeFromEnquiry(product.id);
+            } else {
+              addToEnquiry(product);
+            }
           }}
           aria-label={
             inList
@@ -106,7 +111,7 @@ export default function ProductCard({ product }) {
           }
           aria-pressed={inList}
         >
-          {inList ? "✓ Added" : "+ Enquire"}
+          {inList ? "✓ Remove" : "+ Enquire"}
         </button>
       </div>
     </Link>

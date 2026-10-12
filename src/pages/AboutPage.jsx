@@ -73,8 +73,8 @@ export default function AboutPage() {
                 <p className="about__text">
                   We manufacture and supply across a comprehensive range
                   including PVC, XLPE, Silicone, EPR/PCP, Butyl Rubber, Trailing
-                  & Reeling, Control, EV Charging, Solar DC, PTFE (Teflon), and
-                  Silicone Profiles — meeting demanding requirements across
+                  & Reeling, Control, EV Powertrain, Solar DC, PTFE (Teflon),
+                  and Silicone Profiles — meeting demanding requirements across
                   extreme heat, heavy duty, and specialized industrial
                   applications.
                 </p>

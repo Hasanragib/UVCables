@@ -1046,7 +1046,7 @@ export const PRODUCT_DETAILS = {
     tempRange: "-15°C to +150°C",
     conductorMaterial: "Annealed tin copper",
     conductorClass: "Class 5 (Stranded)",
-    insulation: "PVC / XLPE / Rubber",
+    insulation: "Silicone / EPR / Rubber",
     sheath: "Elastomers Outer Sheath",
     armoring: "SWA optional / Al foil or Cu braid screen",
     flameRating: "Flame Retardant (FR / FRLS)",
@@ -1060,7 +1060,7 @@ export const PRODUCT_DETAILS = {
       {
         layer: 2,
         name: "Insulation",
-        material: "PVC, XLPE, Neoprene, EPR colour coded insulations",
+        material: "Silicone / EPR colour coded insulations",
         color: "#2563EB",
       },
       {

@@ -465,11 +465,11 @@
 }
 
 .footer__col-title {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-heading);
+  margin-top: var(--space-3);
   margin-bottom: var(--space-3);
 }
 

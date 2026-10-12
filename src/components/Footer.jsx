@@ -124,7 +124,7 @@ export default function Footer() {
 
           {/* COLUMN 2 — Our Cables */}
           <div className="footer__products-col">
-            <div className="footer__col-title">Our Cables</div>
+            <div className="footer__col-title">Product Range</div>
             <div className="footer__links">
               {PRODUCTS.map(function (p) {
                 return (

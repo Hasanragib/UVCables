@@ -448,7 +448,7 @@ export default function ContactPage() {
                     What to Include
                   </div>
                   {[
-                    "Cable type (e.g. XLPE, PVC, EPR)",
+                    "Cable type (e.g. PVC, EPR, Silicone)",
                     "Voltage and current rating required",
                     "Conductor cross-section (sq.mm)",
                     "Number of cores",
